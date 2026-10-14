@@ -4,6 +4,7 @@ on:
     types: [opened, edited, synchronize, reopened]
 jobs:
   check:
+    if: github.actor != 'oadp-rebasebot'
     name: Check PR Title
     runs-on: ubuntu-latest
     steps:
